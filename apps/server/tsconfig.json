@@ -1,7 +1,19 @@
 {
-  "extends": "@repo/typescript-config/node.json",
-  "include": [
-    "./src/**/*.ts"
-  ],
-  "exclude": ["node_modules"]
+  "compilerOptions": {
+    "target": "ESNext",                     // Specify ECMAScript target version
+    "module": "CommonJS",                   // Use CommonJS for module system (typical for Node.js)
+    "lib": ["ESNext"],                      // Include standard library
+    "allowJs": true,                        // Allow JavaScript files
+    "strict": true,                         // Enable strict type-checking options
+    "esModuleInterop": true,                // Allow default imports from modules with no default export
+    "skipLibCheck": true,                   // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure file names are case-consistent
+    "outDir": "./dist",                     // Output directory for compiled files
+    "rootDir": "./src",                     // Root directory of input files
+    "moduleResolution": "node",             // Node.js style module resolution
+    "resolveJsonModule": true,              // Allow importing JSON modules
+    "types": ["node"]                       // Specify Node.js types
+  },
+  "include": ["src/**/*"],                   // Include all .ts files in src
+  "exclude": ["node_modules", "**/*.test.ts"] // Exclude node_modules and test files
 }
