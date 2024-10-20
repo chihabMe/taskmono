@@ -5,14 +5,15 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { trpc } from './utils/trpc';
 import { httpBatchLink } from '@trpc/client';
 import Hello from './components/Hello';
-
+const url = `${import.meta.env.VITE_API}/trpc`
+console.log(url)
 function App() {
   const [queryClient] = useState(() => new QueryClient());
   const [trpcClient] = useState(() =>
     trpc.createClient({
       links: [
         httpBatchLink({
-          url: 'http://localhost:8000/trpc',
+          url,
         })
       ]
     }),
