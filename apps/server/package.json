@@ -2,6 +2,7 @@
   "name": "server",
   "version": "0.1.0",
   "private": true,
+  "main": "./src/trpc",
   "scripts": {
     "dev": "pnpm nodemon ./src/index.ts ",
     "build": "tsc ",

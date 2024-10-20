@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "src/trpc/index.ts",
   "scripts": {
     "dev": "vite --port 3000",
     "build": "tsc -b && vite build",
@@ -12,8 +11,9 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
-    "@tanstack/react-query": "^4.36.1",
+    "@tanstack/react-query": "%4.35.3",
     "@trpc/client": "^10.45.2",
+    "@trpc/react": "^9.27.4",
     "@trpc/react-query": "^10.45.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
