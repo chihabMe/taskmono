@@ -1,14 +1,14 @@
 import { trpc } from '../utils/trpc'
 
 const Hello = () => {
-  const { data, isLoading } = trpc.users.getAllUsers.useQuery()
-  if (isLoading) return <h1>loading </h1>
-  if (!data) return <h1>no data</h1>
+  const { data, isLoading } = trpc.books.getAllBooks.useQuery()
+  if (isLoading) return <div>Loading...</div>
+  if (!data) return <div>No data</div>
   return (
     <div>
-      {data.map((user) => (
-        <div key={user.id}>
-          <h2>{user.name}</h2>
+      {data.map((book) => (
+        <div key={book.id}>
+          {book.name}
         </div>
       )
       )}
